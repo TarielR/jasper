@@ -6,6 +6,8 @@ import net.sf.jasperreports.engine.export.JRXlsExporter;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import net.sf.jasperreports.export.SimpleXlsExporterConfiguration;
+import net.sf.jasperreports.export.SimpleXlsReportConfiguration;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.File;
 import java.util.HashMap;
@@ -32,6 +34,9 @@ public class Report {
             JasperReport jReport = JasperCompileManager.compileReport(sourceFileName);
             JasperPrint jPrint = JasperFillManager.fillReport(jReport, new HashMap(), new JRTableModelDataSource(report.getTableModel()));
 
+//            JasperViewer jViewer = new JasperViewer(jPrint);
+//            jViewer.setVisible(true);
+
             JasperExportManager.exportReportToHtmlFile(jPrint, "D:\\proj\\users.html");
             JasperExportManager.exportReportToPdfFile(jPrint, "D:\\proj\\users.pdf");
             JasperExportManager.exportReportToXmlFile(jPrint, "D:\\proj\\users.xml", false);
@@ -41,8 +46,8 @@ public class Report {
             exporter.setExporterInput(new SimpleExporterInput(jPrint));
             exporter.setExporterOutput(new SimpleOutputStreamExporterOutput("D:\\proj\\users.xls"));
 
-            SimpleXlsExporterConfiguration configuration = new SimpleXlsExporterConfiguration();
-//            //configuration.setOnePagePerSheet(true);
+            SimpleXlsReportConfiguration configuration = new SimpleXlsReportConfiguration();
+            configuration.setOnePagePerSheet(false);
             exporter.setConfiguration(configuration);
 
             exporter.exportReport();
