@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-10-27T13:37:55 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Users" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="355ed63a-85e3-486c-845d-6172dfdd3327">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="IlNfVVNFUlMiICwxNSwxNSw1ZGE1ZTA3YS0yODg5LTRiYzYtYTBjOS05NGE3ZjVkZTQ2OGM7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Oracle"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM "S_USERS"]]>
+	</queryString>
+	<field name="ID" class="java.lang.String"/>
+	<field name="PASSWORD" class="java.lang.String"/>
+	<field name="SHORT_NAME" class="java.lang.String"/>
+	<field name="FULL_NAME" class="java.lang.String"/>
+	<field name="ORGANIZATSIYA" class="java.lang.String"/>
+	<field name="DOLZHNOST" class="java.lang.String"/>
+	<field name="ID_UPPER" class="java.lang.String"/>
+	<field name="PASSWORD_UNENCRYPTED" class="java.lang.String"/>
+	<field name="IS_USER_LOCKED" class="java.lang.String"/>
+	<field name="IS_FORCE_PASS_CHANGE" class="java.lang.String"/>
+	<field name="PASSWORD_NEW" class="java.lang.String"/>
+	<group name="ORGANIZATSIYA">
+		<groupExpression><![CDATA[$F{ORGANIZATSIYA}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" uuid="4d6c3296-686a-4181-8425-1dc09ac24d0f"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="60" height="30" uuid="22d2d645-b7a8-4ba8-b407-f6c84b4249fc"/>
+				<text><![CDATA[SHORT_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="60" height="30" uuid="bb7251c3-6abc-48a1-9413-0009d4acbcd7"/>
+				<text><![CDATA[FULL_NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="60" height="30" uuid="5eef4026-86f9-44cf-b1ea-06a9d099e27e"/>
+				<text><![CDATA[ORGANIZATSIYA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="55" height="30" uuid="9731edf4-9776-40c1-8477-00b823f6e1ce"/>
+				<text><![CDATA[DOLZHNOST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="50" height="30" uuid="63d067fe-3182-4473-be2c-061e3f115488"/>
+				<text><![CDATA[ID_UPPER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="50" height="30" uuid="8f38cb57-02bc-47eb-acaa-565c1b3a4313"/>
+				<text><![CDATA[PASSWORD_UNENCRYPTED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="0" width="50" height="30" uuid="5cbc3f90-7796-4b2c-af57-617c45531e6d"/>
+				<text><![CDATA[IS_USER_LOCKED]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="50" height="30" uuid="a5d4706c-3597-425d-9596-391824aa6f86"/>
+				<text><![CDATA[IS_FORCE_PASS_CHANGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="0" width="50" height="30" uuid="92ae81d8-3384-49d1-8b12-469e91fff442"/>
+				<text><![CDATA[PASSWORD_NEW]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="70" height="30" uuid="8167d756-bef6-49b5-8802-1041bdb339b1"/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="60" height="30" uuid="520a5564-714c-437e-9de8-eda15f56b505"/>
+				<textFieldExpression><![CDATA[$F{SHORT_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="1" width="60" height="30" uuid="0d6fb367-c1e7-46d5-93cd-5199245c0c81"/>
+				<textFieldExpression><![CDATA[$F{FULL_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="1" width="60" height="30" uuid="ce2372c6-0769-45be-8643-9cb50e628ec8"/>
+				<textFieldExpression><![CDATA[$F{ORGANIZATSIYA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="1" width="53" height="30" uuid="4a0bef74-63ca-4a32-ad34-e5500a8234ba"/>
+				<textFieldExpression><![CDATA[$F{DOLZHNOST}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="50" height="30" uuid="2131eb7d-8499-4c69-b1ee-0e416001e138"/>
+				<textFieldExpression><![CDATA[$F{ID_UPPER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="50" height="30" uuid="fdfb2169-e955-4521-8eef-af7f53a50e84"/>
+				<textFieldExpression><![CDATA[$F{PASSWORD_UNENCRYPTED}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="50" height="30" uuid="48da6db1-c87f-4b89-816e-4ae82c13a1ea"/>
+				<textFieldExpression><![CDATA[$F{IS_USER_LOCKED}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="50" height="30" uuid="5eabc9b4-212f-4033-95b3-ebb0d2fc0183"/>
+				<textFieldExpression><![CDATA[$F{IS_FORCE_PASS_CHANGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="0" width="50" height="30" uuid="8a918b89-f599-4b38-b345-162a12390edf"/>
+				<textFieldExpression><![CDATA[$F{PASSWORD_NEW}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
